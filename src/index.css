@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a.active{
+  color: #E12C43;
+  border-bottom: 3px solid #E12C43;
+}
+.slider::-webkit-scrollbar{
+  width: 0;
+}
+.menu-nav::-webkit-scrollbar{
+  width: 0;
+}
+.tr-scrl::-webkit-scrollbar{
+  width: 0;
+}
+
+.slider-btn:hover{
+  color: #E12C43;
+}
+
+.slider-btn:hover .span-1{
+   width: 100%;
+}
+
+.slider-btn:hover .span-2{
+  width: 0%;
+}
+
+
+
+
+
+
+
+
+.overlay::after{
+position: absolute;
+content: "";
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.041);
+inset: 0;
+transition: all 0.7s;
+}
+
+.slidecard:hover .overlay::after{
+  background-color: rgba(0, 0, 0, 0.438);
+}
+
+
+.trending-card:hover .heart-btn{
+  bottom: 10px;
+}
+.trending-card:hover .cart-btn{
+  bottom: 10px;
+}
+.trending-card:hover .m-heart-btn{
+  bottom: 25px;
+}
+.trending-card:hover .m-cart-btn{
+  bottom: 25px;
+}
+.menu-bnr:hover .bnr-ovr{
+  background-color: rgba(0, 0, 0, 0.575);
+  opacity: 1;
+  z-index: 40;
+
+}
+.menu-bnr:hover .bnr-img{
+  transform: scale(1.05);
+
+}
+@media(min-width: 640px) {
+  .overlay::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.041);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.7s;
+    }
+  
+}
